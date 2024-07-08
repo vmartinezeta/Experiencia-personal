@@ -14,6 +14,7 @@ module.exports = {
   rules: {
     'react/jsx-no-target-blank': 'off',
     "react/prop-types":"off",
+    "eslint-disable":"off",
     'react-refresh/only-export-components': [
       'warn',
       { allowConstantExport: true },

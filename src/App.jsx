@@ -7,8 +7,7 @@ import { useEffect } from 'react'
 
 
 function App() {
-
-  const { loadTecnologias, tecnologias, loadProyectos, proyectos } = useExperiencia()
+  const { loadTecnologias, tecnologias, loadProyectos, proyectos, isLoading, isError } = useExperiencia()
 
   useEffect(() => {
     loadTecnologias()
@@ -25,7 +24,6 @@ function App() {
       </div>
     </div>
 
-
     <div className="yo">
       <div className="yo__quien-soy">
         <h1 className="yo__titulo">Soy Víctor</h1>
@@ -40,11 +38,14 @@ function App() {
         </p>
       </div>
     </div>
+
     <div className="experiencia">
       <Section titulo="Tecnología" elementos={tecnologias} />
     </div>
+
     <div className="proyectos">
-      <Section titulo="Proyectos" elementos={proyectos} />
+      {isLoading && !isError && <h1 className="loading">Loading...</h1>}
+      {!isLoading && <Section titulo="Proyectos" elementos={proyectos} />}
     </div>
 
     <div className="footer">
