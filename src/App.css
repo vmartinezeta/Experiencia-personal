@@ -44,7 +44,7 @@
     bottom: 0;
     left: calc(50% - 115px);
     border-radius: 50%;
-    border: 6px solid #000;
+    border: 2px solid #000;
 }
 
 .foto__img {
@@ -55,7 +55,7 @@
     position: absolute;
     inset: 0;
     margin: auto;
-    border: 2px solid #000;
+    border: 1px solid #000;
     border-left: none;
 }
 

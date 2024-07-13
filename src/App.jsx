@@ -1,5 +1,5 @@
 import reactLogo from './assets/react.svg'
-import foto from './assets/foto.jpg'
+import foto from './assets/foto.png'
 import './App.css'
 import Section from './components/Section'
 import { useExperiencia } from './context/experiencia'
