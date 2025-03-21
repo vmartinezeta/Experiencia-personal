@@ -1,6 +1,5 @@
-import { createContext, useContext, useState } from "react";
-import { Item } from "../classes/Item";
-
+import { createContext, useContext, useState } from "react"
+import { Item } from "../classes/Item"
 
 
 const ExperienciaContext = createContext()
@@ -25,11 +24,11 @@ export function ExperienciaProvider({ children }) {
             new Item({ titulo: "Reactjs", subtitulo: "Libreria de javascript", link:"https://es.react.dev/" }),
             new Item({ titulo: "Handlebars", subtitulo: "Motor de plantilla", link:"https://handlebarsjs.com/" }),
             new Item({ titulo: "Nextjs", subtitulo: "Framework", link:"https://nextjs.org/" }),
-            new Item({ titulo: "Node", subtitulo: "Entorno de ejecución de js", link:"https://nodejs.org/en" }),
+            new Item({ titulo: "Node", subtitulo: "Entorno de ejecución de Js", link:"https://nodejs.org/en" }),
             new Item({ titulo: "Express", subtitulo: "Framework", link:"https://expressjs.com/es/" }),
             new Item({ titulo: "Mysql", subtitulo: "Gestor de base de datos", link:"https://www.mysql.com/" }),
             new Item({ titulo: "Sequelize", subtitulo: "ORM", link:"https://sequelize.org/" }),
-            new Item({ titulo: "Phaser", subtitulo: "Libreria js", link:"https://phaser.io/" })
+            new Item({ titulo: "Phaser", subtitulo: "Libreria Js", link:"https://phaser.io/" })
         ])
     }
 

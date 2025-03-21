@@ -1,5 +1,5 @@
 import reactLogo from './assets/react.svg'
-import foto from './assets/foto.png'
+import foto from './assets/foto.jpg'
 import './App.css'
 import Section from './components/Section'
 import { useExperiencia } from './context/experiencia'
@@ -12,7 +12,7 @@ function App() {
   useEffect(() => {
     loadTecnologias()
     loadProyectos()
-  }, [])
+  }, [loadProyectos, loadTecnologias])
 
 
   return <div className="app">
@@ -28,7 +28,7 @@ function App() {
       <div className="yo__quien-soy">
         <h1 className="yo__titulo">Soy Víctor</h1>
         <p className="yo__descripcion">
-          <b>Víctor Ismael Martinez Rodriguez</b>, un apasionado del desarrollo web. No tengo mucha experiencia apenas estoy empezando pero con las herramientas de hoy en dia, que son de fácil uso, serán suficientes para crecer en este mundo tan emocionante y divertido.
+          <b>Víctor Ismael Martínez Rodríguez</b>, amante del desarrollo y diseño de aplicaciones especialmente, el desarrollo web. Estoy ultimamente muy activo dedicando entre 2 a 3 horas diarias para fortalecer mis conocimientos y afortunadamente con la ayuda de la IA esto se vuelve cada vez más emcionante y divertido.
         </p>
       </div>
       <div className="yo__mision">
