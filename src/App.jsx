@@ -4,6 +4,7 @@ import './App.css'
 import Section from './components/Section'
 import { useExperiencia } from './context/experiencia'
 import { useEffect } from 'react'
+import Logo from './components/Logo'
 
 
 function App() {
@@ -19,7 +20,7 @@ function App() {
     <div className="main-header">
       <img src={reactLogo} className="logo react" alt="React logo" />
       <div className="header">
-        <div className="foto"><img src={foto} className="foto__img" /></div>
+        <Logo />
         <h1 className="ocupacion">Desarrollador fullstack</h1>
       </div>
     </div>
