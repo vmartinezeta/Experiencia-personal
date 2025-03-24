@@ -1,4 +1,4 @@
-
+import sqUrl from "../assets/sequelize.svg"
 function Section({ titulo, elementos }) {
 
     return <div className="seccion">

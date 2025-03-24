@@ -1,11 +1,12 @@
-import reactLogo from './assets/react.svg'
-import foto from './assets/foto.jpg'
 import './App.css'
+import  fotoUrl from "./assets/foto.png"
+import reactLogo from './assets/react.svg'
 import Section from './components/Section'
 import { useExperiencia } from './context/experiencia'
 import { useEffect } from 'react'
 import Logo from './components/Logo'
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {faFacebook, faLinkedin, faYoutube} from "@fortawesome/free-brands-svg-icons"
 
 function App() {
   const { loadTecnologias, tecnologias, loadProyectos, proyectos, isLoading, isError } = useExperiencia()
@@ -13,14 +14,15 @@ function App() {
   useEffect(() => {
     loadTecnologias()
     loadProyectos()
-  }, [loadProyectos, loadTecnologias])
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
 
 
   return <div className="app">
     <div className="main-header">
       <img src={reactLogo} className="logo react" alt="React logo" />
       <div className="header">
-        <Logo />
+        <Logo url={fotoUrl} />
         <h1 className="ocupacion">Desarrollador fullstack</h1>
       </div>
     </div>
@@ -49,8 +51,15 @@ function App() {
       {!isLoading && <Section titulo="Proyectos" elementos={proyectos} />}
     </div>
 
-    <div className="footer">
-      <b className="footer__autor">&copy; Víctor Martínez</b>
+    <div className="footer">  
+      <div className="sociales-y-creditos">
+        <div className="sociales">
+          <a className="sociales__link" target="_blank" href="https://www.facebook.com/profile.php?id=61562494782547"><FontAwesomeIcon icon={faFacebook} /></a>
+          <a className="sociales__link" target="_blank" href="https://www.linkedin.com/in/victor-martinez-00935515a"><FontAwesomeIcon icon={faLinkedin}/></a>
+          <a className="sociales__link" target="_blank" href="https://www.youtube.com/@oh-vito"><FontAwesomeIcon icon={faYoutube}/></a>
+        </div>
+        <b className="footer__autor">&copy; Víctor Martínez</b>
+      </div>
     </div>
   </div>
 }

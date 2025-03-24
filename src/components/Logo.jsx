@@ -1,7 +1,9 @@
-import { useState } from 'react';
-import fotoUrl from '../assets/foto.jpg'
+import { useState } from 'react'
+import {faSpinner} from "@fortawesome/free-solid-svg-icons"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-function Logo() {
+
+function Logo({url}) {
   const [isImageLoaded, setIsImageLoaded] = useState(false)
   const [hasError, setHasError] = useState(false)
 
@@ -15,18 +17,18 @@ function Logo() {
 
   return (
     <div className="foto">
-      {!isImageLoaded && !hasError && <p className="loading">Cargando imagen...</p>}
+      {!isImageLoaded && !hasError && <FontAwesomeIcon className="loading" icon={faSpinner}/>}
       {hasError && <p>Error al cargar la imagen.</p>}
       <img
         className="foto__img"
-        src={fotoUrl} // Ruta de la imagen local
+        src={url} // Ruta de la imagen local
         alt="Descripción de la imagen"
         onLoad={handleImageLoad}
         onError={handleImageError}
         style={{ display: isImageLoaded && !hasError ? 'block' : 'none' }}
       />
     </div>
-  );
+  )
 }
 
-export default Logo;
+export default Logo
